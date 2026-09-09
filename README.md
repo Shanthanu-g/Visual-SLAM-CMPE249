@@ -91,21 +91,6 @@ These thresholds are project targets, not safety guarantees.
 - NVIDIA RTX 4070 SUPER desktop GPU
 - ROS2 and PCL only if core milestones are completed early
 
-## Repository Structure
-
-```text
-.
-|-- README.md
-|-- docs/
-|   |-- project_proposal.md
-|   |-- literature_survey.md
-|   `-- ai_novelty_feasibility_audit.md
-|-- configs/       # planned camera and experiment configurations
-|-- scripts/       # planned adapters, evaluation, and plotting scripts
-|-- src/           # planned integration and controller code
-`-- results/       # planned generated metrics and plots
-```
-
 ## Evaluation Policy
 
 - Ground truth will never be passed to ORB-SLAM3 or the waypoint controller.
