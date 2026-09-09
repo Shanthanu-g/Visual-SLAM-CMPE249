@@ -1,19 +1,18 @@
 # Software-Only Evaluation of Visual SLAM for Autonomous Driving
 
 **Course:** CMPE 249  
-**Team member:** Shanthanu  
+**Team member:** Shanthanu Gopikrishnan, Bhavdeep Randhawa
 **Selected track:** Spatial Computing and Autonomous Systems  
-**Repository URL:** Add the GitHub URL after creating or importing this repository.
 
 ## Abstract
 
-This project evaluates whether a consumer desktop can support a software-only autonomous-driving localization pipeline using visual simultaneous localization and mapping (SLAM). ORB-SLAM3 will estimate vehicle motion from stereo images recorded in the KITTI dataset and generated in the CARLA simulator. Estimated trajectories will be compared with ground truth using trajectory error, tracking availability, and processing-rate metrics. If the localization pipeline is stable, its estimated pose will also be used by a basic waypoint-following controller in CARLA. The project does not claim deployment readiness for a physical vehicle. Its goal is to provide a reproducible evaluation of localization behavior, computational feasibility, and failure modes under simulated lighting, weather, motion, and traffic changes on a desktop equipped with an NVIDIA RTX 4070 SUPER.
+This project evaluates an autonomous-driving localization pipeline using visual simultaneous localization and mapping (SLAM) Solution. ORB-SLAM3 will estimate vehicle motion from stereo images recorded in the KITTI dataset and generated in the CARLA simulator. Estimated trajectories will be compared with ground truth using trajectory error, tracking availability, and processing-rate metrics. If the localization pipeline is stable, its estimated pose will also be used by a basic waypoint-following controller in CARLA. The goal is to provide a reproducible evaluation of localization behavior, computational feasibility, and failure modes under simulated lighting, weather, motion, and traffic changes on a desktop equipped with an NVIDIA RTX 4070 SUPER.
 
 ## Problem Statement
 
 Autonomous vehicles need a reliable estimate of their position when GPS is inaccurate, obstructed, or unavailable. Visual SLAM can estimate motion using cameras, but feature-based methods can lose tracking under low texture, rapid motion, difficult lighting, or dynamic traffic. This project asks:
 
-> How accurately and reliably can ORB-SLAM3 localize a software-simulated vehicle and process real-world driving recordings on a consumer desktop, and is its pose estimate stable enough to support basic waypoint following in CARLA?
+> How accurately and reliably can ORB-SLAM3 localize a software-simulated vehicle and process real-world driving recordings, and is its pose estimate stable enough to support basic waypoint following in CARLA?
 
 ## Scope
 
@@ -27,7 +26,7 @@ Autonomous vehicles need a reliable estimate of their position when GPS is inacc
 - Evaluate baseline, low-light, rain, and dynamic-traffic scenarios.
 - Attempt closed-loop waypoint following using the SLAM estimate.
 
-### Stretch goals
+### Future goals
 
 - Add stereo-inertial processing.
 - Accumulate LiDAR scans using ORB-SLAM3 pose estimates.
@@ -114,12 +113,6 @@ These thresholds are project targets, not safety guarantees.
 - Failed runs and tracking losses will be reported rather than discarded.
 - Hardware, resolution, simulator settings, and software versions will be recorded with results.
 - Claims will be limited to dataset and simulation evidence.
-
-## Documentation
-
-- [Project proposal](docs/project_proposal.md)
-- [Recent literature and SOTA survey](docs/literature_survey.md)
-- [AI novelty and feasibility audit](docs/ai_novelty_feasibility_audit.md)
 
 ## Baseline Resources
 
